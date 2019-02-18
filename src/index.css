@@ -15,7 +15,7 @@ a:visited{
   color: darkblue;
 }
 .page-wrapper{
-  margin: 0 25%;
+  margin: 0 15%;
   background: grey;
 }
 
@@ -57,7 +57,6 @@ input{
 
 .picker{
   width: 100%;
-
 }
 
 .textAlert{
@@ -70,4 +69,19 @@ header, footer{
 
 footer{
   text-align: center;
+}
+
+.poster{
+  margin: 0.375rem;
+}
+
+.singleItemBtn{
+  margin-right: 0.375rem;
+}
+
+@media screen and (max-width: 800px) {
+  .page-wrapper{
+    margin: 0;
+    background: grey;
+  }
 }

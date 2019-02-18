@@ -32,24 +32,26 @@ class SingleItemPage extends React.Component {
             <div className="row">
                 {this.state.isLoading && <p className="textAlert"> Loading ...</p>}
                 <div className="col-md-5">
-                    <img alt="poster"
+                    <img alt="poster" className="poster"
                          src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${this.state.result.poster_path}`}/>
                 </div>
                 <div className="col-md-7">
                     <h3>{this.state.result.title}</h3>
-                    <p>Release date: {this.state.result.release_date}</p>
-                    <p>Rating: {this.state.result.vote_average}</p>
-                    <p>Overview:</p>
+                    {!this.state.isLoading && <p>Release date: {this.state.result.release_date}</p>}
+                    {!this.state.isLoading && <p>Rating: {this.state.result.vote_average}</p>}
+                    {!this.state.isLoading && <p>Overview:</p>}
                     <p>{this.state.result.overview}</p>
+                    <div className="singleItemBtn">
                     {this.props.items.some(e => e.id === this.state.result.id) ?
-                        <button className="btn btn-danger" onClick={() => {
+                        <button className="btn btn-danger btn-block " onClick={() => {
                             this.props.handleRemove(this.state.result.id);
                         }}>Remove </button> :
-                        <button className="btn btn-success" onClick={() => {
+                        <button className="btn btn-success btn-block " onClick={() => {
                             this.props.handleAdd(this.state.result);
                         }
                         }>Add </button>
                     }
+                    </div>
                 </div>
             </div>
         );

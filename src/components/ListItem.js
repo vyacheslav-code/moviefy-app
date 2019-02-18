@@ -16,10 +16,10 @@ export default connect((state)=>({items: state}))((props) =>(
                 <br/>
              Rating: {props.item.vote_average}
             {props.items.some(e => e.id === props.item.id) ?
-                <button className="btn btn-danger" onClick={()=>{
+                <button className="btn btn-danger btn-block" onClick={()=>{
                     props.dispatch(removeItem(props.item.id));
                 }}>Remove </button> :
-                <button className="btn btn-primary" onClick={()=>{
+                <button className="btn btn-primary btn-block" onClick={()=>{
                    props.dispatch(addItem(props.item));
                 }
                 }>Add </button>

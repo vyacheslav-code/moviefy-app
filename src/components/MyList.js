@@ -31,7 +31,7 @@ class MyList extends React.Component {
                                 disabled={this.props.items.length === 0}
                                 onClick={this.handlePick}
                                 className="btn btn-info picker"
-                            > PICK MOVIE
+                            > WHAT SHOULD I WATCH?
                             </button>
                             {
                                 this.props.items.map((item, index) => (

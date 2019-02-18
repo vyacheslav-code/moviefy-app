@@ -6,7 +6,7 @@ export default  (props) => (
         visible={!!props.selectedItem}
         className="modal"
     >
-        <h3>Selected Item</h3>
+        <h3>Go Watch</h3>
         {props.selectedItem && <p className="modalTitle">{props.selectedItem}</p>}
         <button className="btn btn-success" onClick={props.handleClear}>Okay</button>
     </Modal>
